@@ -1,8 +1,11 @@
 function solve(input) {
-    let N = Number(input);
-    for(let i = 1; i <= N; i++) {
-        console.log(i);
+    let myNumber = Number(input);
+    let output = "";
+ 
+    for(let i = 1; i <= myNumber; i++) {
+        output = output.concat( i.toString() + " ");
     }
+    console.log(output);
 }
 
-solve(5)
+solve(5);
