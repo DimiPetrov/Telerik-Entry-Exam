@@ -3,4 +3,4 @@ function solve(arg) {
     console.log(`Hello, ${name}!`);
 }
 
-solve('John')
+solve(gets());
