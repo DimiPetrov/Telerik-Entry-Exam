@@ -4,7 +4,7 @@ function solve(input) {
     index++;
     let sum = 0;
 
-    for(let i = 1; i <= N; i++) {
+    for (let i = 1; i <= N; i++) {
         let num = Number(input[index]);
         index++;
         sum += num;

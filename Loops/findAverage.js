@@ -1,13 +1,13 @@
 function solve(input) {
-    let N = Number(input[0]);
+    let numbers = input.shift();
     let sum = 0;
 
-    for(let i = 1; i <= N; i++) {
+    for (let i = 1; i <= numbers; i++) {
         let num = input.shift();
         sum += num;
     }
 
-    let average = (sum / N).toFixed(2);
+    let average = (sum / numbers).toFixed(2);
     console.log(average);
 }
 

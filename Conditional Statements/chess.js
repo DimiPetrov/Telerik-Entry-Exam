@@ -1,20 +1,23 @@
 function solve(arg1, arg2) {
-    let L = arg1;
-    let R = Number(arg2);
+    let l = arg1;
+    let r = Number(arg2);
+    let dark = 'dark';
+    let light = 'light';
 
-    if(L === 'a' || L === 'c' || L === 'e' || L === 'g') {
-        if(R === '1' || R === '3' || R === '5' || R === '7') {
-            console.log(`dark`);
-        } else if(R === '2' || R === '4' || R === '6' || R === '8') {
-            console.log(`light`);
+    if (l === 'a' || l === 'c' || l === 'e' || l === 'g') {
+        if (r === '1' || r === '3' || r === '5' || r === '7') {
+            console.log(dark);
+        } else if (r === '2' || r === '4' || r === '6' || r === '8') {
+            console.log(light);
         }
-    } else if(L === 'b' || L === 'd' || L === 'f' || L === 'h') {
-        if(R === '1' || R === '3' || R === '5' || R === '7') {
-            console.log(`light`);
-        } else if(R === '2' || R === '4' || R === '6' || R === '8') {
-            console.log(`dark`);
+    } else if (l === 'b' || l === 'd' || l === 'f' || l === 'h') {
+        if (r === '1' || r === '3' || r === '5' || r === '7') {
+            console.log(light);
+        } else if (r === '2' || r === '4' || r === '6' || r === '8') {
+            console.log(dark);
         }
     }
+    
 }
 
 solve('f', '3')
