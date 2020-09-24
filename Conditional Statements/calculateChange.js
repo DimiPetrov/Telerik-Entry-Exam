@@ -1,20 +1,20 @@
 function solve(input1, input2) {
-    let price = Number(input1);
-    let money = Number(input2);
-    let returnValue = (money - price).toFixed(2);
-    var change = {};
+    let priceInStotinki = Number(input1) * 100;
+    let moneyInStotinki = Number(input2) * 100;
+    let returnValue = (moneyInStotinki - priceInStotinki);
 
     const coinTypes = ['1 lev', '50 stotinki', '20 stotinki', '10 stotinki', '5 stotinki', '2 stotinki', '1 stotinka'];
-    const coinValues = [1, 0.50, 0.20, 0.10, 0.05, 0.02, 0.01];
+    const coinValuesInStotinki = [100, 50, 20, 10, 5, 2, 1];
 
-    var amount;
 
-    for(var i = 0; i < coinValues.length; I++) {
-        amount = Math.floor(returnValue/coinValues[i]);
-        if(amount > 0) {
-            change[coinTypes[i]] = amount;
-            returnValue = returnValue / coinValues[i];
-            console.log()
+    for(var i = 0; i < coinValuesInStotinki.length; i++) {
+        let numberOfCoins = Math.floor(returnValue/coinValuesInStotinki[i]);
+        if(numberOfCoins > 0) {
+            console.log(numberOfCoins + " X " + coinTypes[i]);
+            returnValue = returnValue - (numberOfCoins * coinValuesInStotinki[i]);
+            //console.log(returnValue)
         }
     }
 }
+
+solve(0.76, 1);
