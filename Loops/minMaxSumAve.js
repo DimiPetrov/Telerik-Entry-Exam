@@ -1,19 +1,27 @@
-function solve(input) {
-    let n = Number(input[index]);
+function solve() {
     let sum = 0;
-
-    for (let i = 1; i <= N; i++) {
-        let num = Number(input[index]);
-        index++;
-        sum += num;
+    let n = +gets();
+    let values =[];
+    let theMax = Number.MIN_SAFE_INTEGER;
+    let theMin = Number.MAX_SAFE_INTEGER;
+    for (let i = 0; i < n; i++) {
+        let newValue = +gets();
+        sum += newValue;
+        values.push(newValue);
+        theMax = Math.max(theMax,  newValue);
+        theMin =  Math.min(theMin,  newValue);
     }
-    let minNum = Number.MAX_SAFE_INTEGER;
-    let maxNum = Number.MIN_SAFE_INTEGER;
-    let average = sum / N;
-    console.log(`min= ${minNum.toFixed(2)}`);
-    console.log(`max= ${maxNum.toFixed(2)}`);
+
+   
+    //let maxNum = Math.max(...values);
+    //let minNum = Math.min(...values);
+    
+    let average = sum / n;
+
+    console.log(`min= ${theMin.toFixed(2)}`);
+    console.log(`max= ${theMax.toFixed(2)}`);
     console.log(`sum= ${sum.toFixed(2)}`);
     console.log(`avg= ${average.toFixed(2)}`);
 }
 
-solve('3', '2', '5', '1')
+solve('3', '2', '5', '1');
