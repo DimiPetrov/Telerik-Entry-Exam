@@ -1,13 +1,12 @@
 function solve(input) {
-    let num = Number(input);
-    let output = "";
-
-    for (let i = 1; i <= num; i++) {
-        for (let j = num; j <= num / 2 - 1; j++) {
-            output = output.concat(i.toString() + " ");
-        }
+    let number = input;
+let result = "";
+for (i = 1; i <= number; i++) {
+    for (j = i; j < number + i; j++) {
+        result += j + ' ';
     }
-    console.log(output);
+    console.log(result)
+    result = "";
 }
 
 solve(3);

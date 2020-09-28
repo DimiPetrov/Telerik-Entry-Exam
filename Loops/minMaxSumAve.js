@@ -1,7 +1,5 @@
 function solve(input) {
-    let index = 0;
-    let N = Number(input[index]);
-    index++;
+    let n = Number(input[index]);
     let sum = 0;
 
     for (let i = 1; i <= N; i++) {
