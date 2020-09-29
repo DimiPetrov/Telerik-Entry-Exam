@@ -5,12 +5,20 @@ function solve(input1, input2) {
 
     for (let i = 1; i <= n; i++) {
         sum += fact(i) / Math.pow(x, i);
+        console.log(sum);
     }
     console.log(sum.toFixed(5));
 }
 
 function fact(n){
-    return n>1 ? n*fact(n-1) : 1;
+    if(n>1){
+        let value = n*fact(n-1);
+        //console.log(value);
+        return value;
+    } else {
+        return 1;
+    }
+    
 }
 
-solve(18, 1)
+solve(4, 2)
