@@ -1,4 +1,4 @@
-function solve(input) {
+function solve(...input) {
     let n = Number(input.shift());
     let oddProduct = 0;
     let evenProduct = 0;
@@ -19,4 +19,4 @@ function solve(input) {
     }
 }
 
-solve('5', '2', '1', '1', '6', '3')
+solve(5, 4, 3, 2, 5, 2)

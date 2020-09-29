@@ -1,7 +1,7 @@
 function solve(input) {
     var number = Number(input);
     primeArray = [];
-    isPrime;
+    isPrime = '';
 
     for (i = 2; i <= number; i++) {
         if (number % i == 0) {
@@ -23,5 +23,6 @@ function solve(input) {
     for (var k = 0; k < primeArray.length; k++) {
         console.log(primeArray[k]);
     }
+}
 
-    solve(12)
+solve(12)
