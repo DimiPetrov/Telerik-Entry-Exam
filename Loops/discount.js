@@ -8,4 +8,12 @@ function solve(input) {
     }
 }
 
+let items = +gets();
+
+    for (let i = 0; i < items; i++) {
+        let price = +gets();
+        let discPrice = Math.round(price * 35) / 100;
+        print(discPrice.toFixed(2));
+    }
+
 solve('2', '50', '40')
