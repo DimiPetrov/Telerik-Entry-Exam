@@ -6,11 +6,8 @@ function solve(...input) {
     if (numbers[i] > max) {
         max = numbers[i];
     }
+}
     console.log(max);
 }
-}
 
-solve(3,
-    1,
-    2,
-    3)
+solve(3,1,2,3)
