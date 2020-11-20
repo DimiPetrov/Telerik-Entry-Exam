@@ -1,21 +1,18 @@
-function solve(n, []) {
-    var str = [];
+let input = ['3',
+    '1,2,3,4,5',
+    '1,2,8,9,9',
+    '1,2,2,3,2'];
 
-    for (var i in str){
-        var list = str[i].split(',').map(Number);
-        console.log(list);
-        var isSorted = true;
-        for(var j = 0 ; j < list.length - 1 ; j++){
-            if(list[j] > list[j+1]) {
-                isSorted = false;
-                break;
-            }
-        }
-        console.log(isSorted);
+let print = this.print || console.log;
+let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
+
+const n = +gets();
+for(let i = 0; i < n; i++) {
+    const list = gets();
+    const numbers = list.split(',').map(Number).sort((a, b) => a - b).join(',');
+    if(list === numbers) {
+        print(true);
+    } else {
+        print(false);
     }
 }
-
-solve('3'
-'1','2','3','4','5'
-'1','2','8','9','9'
-'1','2','2','3','2')

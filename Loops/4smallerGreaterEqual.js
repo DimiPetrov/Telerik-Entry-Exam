@@ -4,19 +4,20 @@ let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
 
 let howManyDigits = Number(gets());
 let previousNum = Number(gets());
-let result = ''
+let result = '';
 result += previousNum;
-for (let i = 0; i < howManyDigits; i++) {
-    currentValue = Number(gets())
+for (let i = 0; i < howManyDigits - 1; i++) {
+    currentValue = Number(gets());
 
     if (currentValue < previousNum) {
-        result += `>${currentValue}`
+        result += `>${currentValue}`;
 
     } else if (currentValue === previousNum) {
-        result += `=${currentValue}`
+        result += `=${currentValue}`;
     } else {
-        result += `<${currentValue}`
+        result += `<${currentValue}`;
     }
-    previousNum = currentValue
+    previousNum = currentValue;
 }
-print(result)
+print(result);
+

@@ -1,15 +1,19 @@
-function solve(input) {
-    var nums = JSON.parse("[" + input + "]");
-    nums.sort(function (a, b) {
-        if (a == 0 && b != 0)
-            return 1;
-        else if (b == 0 && a != 0)
-            return -1;
-        else
-            return 0;
-    });
-    let result = nums.join(",");
-    console.log(result);
+let input = ['0,0,0,5,0,3,2,3'];
+
+let print = this.print || console.log;
+let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
+
+let arr = gets().split(',').map(Number);
+let nonzeroes = [];
+let zeroes = [];
+
+for(let i = 0; i < arr.length; i++) {
+    if(arr[i] == 0){
+        zeroes.push(arr[i]);
+    } else {
+        nonzeroes.push(arr[i]);
+    }
 }
 
-solve("0,0,0,5,0,3,2,3");
+let output = `${nonzeroes.join(',')},${zeroes.join(',')}`;
+print(output);

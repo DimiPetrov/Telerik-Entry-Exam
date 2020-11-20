@@ -1,9 +1,15 @@
-function solve(input) {
-    let list = inupt.shift();
-    let k = Number(input.shift());
-    let rotatedList = list.shift(k);
-    console.log(rotatedList);
+let input = ['5,3,2,1','2'];
+
+let print = this.print || console.log;
+let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
+
+const arr = gets().split(',').map(Number);
+let rotation = +gets();
+
+while(rotation > 0) {
+    const firstEl = arr.shift();
+    arr.push(firstEl);
+    rotation--;
 }
 
-solve(['5','3','2','1']
-['2'])
+print(arr.join(','));

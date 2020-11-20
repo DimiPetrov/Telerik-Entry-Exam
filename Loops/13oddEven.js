@@ -1,4 +1,9 @@
-let input = ['3', '2', '5', '1'];
+let input = ['5',
+    '2',
+    '1',
+    '1',
+    '6',
+    '3'];
 let print = this.print || console.log;
 let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
 

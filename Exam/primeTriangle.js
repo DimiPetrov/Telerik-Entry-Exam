@@ -1,22 +1,39 @@
-function solve(input) {
-    let n = Number(input);
-    let line = 0;
-    let isPrime;
-    for(i = 1; i <= n; i++) {
-        if(i % 2 !== 0) {
-            isPrime = true;
-            line++;
-        } else {
-            isPrime = false;
+const input = ['27'];
+
+const print = this.print || console.log;
+const gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
+
+const n = +gets();
+
+let count = 0;
+
+for (row = 1; row <= n; row++) {
+    let isPrimeRow = true;
+    for (i = 2; i < row; i++) {
+        if (row % i === 0) {
+            isPrimeRow = false;
+            break;
         }
-        for(j = 1; j <= line; j++) {
-            if(isPrime = true) {
-                console.log(1);
+    }
+    if (isPrimeRow) {
+
+        let primeRow = '';
+        for (let col = 1; col <= row; col++) {
+            let isPrimeCol = true;
+            for (i = 2; i < col; i++) {
+                if (col % i === 0) {
+                    isPrimeCol = false;
+                    break;
+                }
+            }
+
+            if (isPrimeCol) {
+                primeRow += '1';
             } else {
-                console.log(0);
+                primeRow += '0';
             }
         }
+        print(primeRow);
     }
 }
 
-solve(10)

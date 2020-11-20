@@ -1,14 +1,9 @@
-function solve(input) {
+let input = ['2, 3, 1, 5, 6'];
 
-    //This is parsing the input string as an array of integers
-    var nums = JSON.parse("[" + input + "]");
+let print = this.print || console.log;
+let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
 
-    //This is actually doing the sorting
-    nums.sort(function (a, b) { return b - a });
 
-    let result = nums.join(", ");
-    console.log(result);
+let numArr = gets().split(', ').map(Number).sort((a, b) => b - a);
 
-}
-
-solve("2, 3, 1, 5, 6");
+print(numArr);

@@ -1,12 +1,8 @@
-function solve(input) {
-    let items = Number(input.shift());
-
-    for (let i = 1; i <= items; i++) {
-        let price = Number(input.shift());
-        let discPrice = (price * 0.35).toFixed(2);
-        console.log(discPrice);
-    }
-}
+let input = ['2',
+    '50',
+    '40'];
+let print = this.print || console.log;
+let gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
 
 let items = +gets();
 
@@ -16,4 +12,3 @@ let items = +gets();
         print(discPrice.toFixed(2));
     }
 
-solve('2', '50', '40')
