@@ -1,18 +1,21 @@
-function solve(input) {
-    var str = input;
-    var listCharacters = input.split(',');
-    var count = str.split(listCharacters).length;
-    var letter = '';
-    for (let i = 0; i < count; i++) {
-        var number = i;
-        letter = number;
-    }
+const input = ['welcometotelerikacademyawards'];
 
-    if (letter === letter) {
-        console.log(number);
-    } else {
-        console.log(-1);
+const print = this.print || console.log;
+const gets = this.gets || ((arr, index) => () => arr[index++])(input, 0);
+
+const str = gets();
+let char = str.split('');
+let index = -1;
+
+for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+        if (!char.includes(char[i])) {
+            index === i;
+            break;
+        }
     }
 }
 
-solve('welcometotelerikacademyawards')
+print(index);
+
+

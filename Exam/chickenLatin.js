@@ -1,7 +1,7 @@
 function solve(input) {
     var sentence = input;
     let word = sentence.split(' ');
-    let letter = word.split(' ');
+    let letter = word.split('');
     for (let i = 0; i < word.length; i++) {
         for (let j = 0; j < letter.length; j++) {
             let vowelFirst = 0;
